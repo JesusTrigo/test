@@ -6,8 +6,8 @@ df_Beer = recomend.df_Beer
 def main():
     # Mostrar enlaces para elegir entre plots.py y app.py
     st.markdown("## Recommendations")
-    if st.button("App"):
-        recomend.run()
+    if st.radio("App"):
+        recomend.main()
     elif st.button("Gráficos"):
         plots.intro()
         plots.get_top_25_beer_styles(df_Beer)
