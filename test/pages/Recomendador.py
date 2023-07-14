@@ -1,6 +1,5 @@
 import streamlit as st
-from pages.pages import plots
-from pages.pages import recomend
+from pages.pages import plots, recomend
 
 df_Beer = recomend.df_Beer
 
@@ -8,7 +7,7 @@ def main():
     # Mostrar enlaces para elegir entre plots.py y app.py
     st.markdown("## Recommendations")
     if st.button("App"):
-        app.run()
+        recomend.run()
     elif st.button("Gráficos"):
         plots.intro()
         plots.get_top_25_beer_styles(df_Beer)
