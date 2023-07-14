@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import requests
 from pages.pages.recomend import plots
-from pages.pages.recomend import app
+from pages.pages.recomend import recomend
 from PIL import Image
 
 
@@ -12,7 +12,7 @@ if st.sidebar.button("Recomend"):
     # Mostrar enlaces directos a plots.py y app.py solo para la página de recomendaciones
     st.markdown("## Recomendations")
     st.markdown("- [Plots](./recomend/plots.py)")
-    st.markdown("- [App](./recomend/app.py)")
+    st.markdown("- [App](./recomend/recomend.py)")
 
     # Verificar qué archivo se seleccionó y cargar el contenido correspondiente
     if st.button("Plots"):
