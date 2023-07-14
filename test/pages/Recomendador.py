@@ -2,6 +2,8 @@ import streamlit as st
 from pages.pages import plots
 from pages.pages import recomend
 
+df_Beer = recomend.df_Beer
+
 def main():
     # Mostrar enlaces para elegir entre plots.py y app.py
     st.markdown("## Recommendations")
