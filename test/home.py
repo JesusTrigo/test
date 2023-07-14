@@ -6,6 +6,28 @@ from PIL import Image
 
 
 # Página principal
+if st.sidebar.button("Home"):
+    # Código para la página principal (home.py)
+    pass
+
+# Página de detección
+if st.sidebar.button("Detection"):
+    # Código para la página de detección (detection.py)
+    pass
+
+# Página de scraping
+if st.sidebar.button("Scrap"):
+    # Código para la página de scraping (scrap.py)
+    pass
+
+# Página de recomendaciones
+if st.sidebar.button("Recomend"):
+    # Mostrar enlaces directos a plots.py y app.py solo para la página de recomendaciones
+    st.markdown("## Recomendations")
+    st.markdown("- [Plots](./recomend/plots.py)")
+    st.markdown("- [App](./recomend/app.py)")
+    
+# Página principal
 def home():
     st.title("Proyecto de Data Science")
     image = Image.open('/app/test/test/images/hackaboss.png')
