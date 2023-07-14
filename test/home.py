@@ -2,8 +2,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import requests
-from pages.pages.recomend import plots
-from pages.pages.recomend import app
+from pages.recomend import plots
+from pages.recomend import app
 from PIL import Image
 
 
