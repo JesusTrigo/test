@@ -5,8 +5,7 @@ df_Beer = recomend.df_Beer
 
 def main():
     # Mostrar enlaces para elegir entre plots.py y app.py
-    st.title("Recomendador")
-    opcion = st.radio("Selecciona una opción:", ["App", "Gráficos"])
+    opcion = st.radio("Seleccione una opción:", ["App", "Gráficos"])
 
     if opcion == "App":
         recomend.main()
