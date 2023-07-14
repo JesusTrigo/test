@@ -2,7 +2,7 @@ import streamlit as st
 from pages.pages import plots
 from pages.pages import recomend
 
-def show():
+def main():
     # Mostrar enlaces para elegir entre plots.py y app.py
     st.markdown("## Recommendations")
     if st.button("App"):
@@ -22,4 +22,4 @@ def show():
 
 # Ejecutar la función show() cuando se llama al archivo
 if __name__ == '__main__':
-    show()
+    main()
