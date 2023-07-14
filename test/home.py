@@ -5,17 +5,6 @@ import requests
 from PIL import Image
 
 
-if st.sidebar.button("Recomend"):
-    # Mostrar enlaces directos a plots.py y app.py solo para la página de recomendaciones
-    st.markdown("## Recomendations")
-
-    # Botones para elegir entre plots.py y app.py
-    if st.button("Plots"):
-        # Código para mostrar el contenido de plots.py
-        st.write("Plots content")
-    elif st.button("App"):
-        # Código para mostrar el contenido de app.py
-        st.write("App content")
     
 # Página principal
 def home():
