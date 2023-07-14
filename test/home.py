@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import requests
-from pages.pages.recomend import plots
+from pages.pages.recomend import main
 from pages.pages.recomend import recomend
 from PIL import Image
 
