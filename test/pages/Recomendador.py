@@ -5,10 +5,12 @@ df_Beer = recomend.df_Beer
 
 def main():
     # Mostrar enlaces para elegir entre plots.py y app.py
-    st.markdown("## Recommendations")
-    if st.radio("App"):
+    st.title("Recomendador")
+    opcion = st.radio("Selecciona una opción:", ["App", "Gráficos"])
+
+    if opcion == "App":
         recomend.main()
-    elif st.button("Gráficos"):
+    elif opcion == "Gráficos":
         plots.intro()
         plots.get_top_25_beer_styles(df_Beer)
         plots.plot_most_common_beer_bar(df_Beer)
@@ -21,6 +23,5 @@ def main():
         plots.plot_3d_scatter_aroma_palate_abv(df_Beer)
         plots.plot_beer_wordcloud(df_Beer)
 
-# Ejecutar la función show() cuando se llama al archivo
 if __name__ == '__main__':
     main()
