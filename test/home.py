@@ -2,11 +2,12 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import requests
+from pages.pages import recomend
 from PIL import Image
 
 
 # Página de recomendaciones
-if st.sidebar("Recomend"):
+if st.sidebar(recomend):
     # Mostrar enlaces directos a plots.py y app.py solo para la página de recomendaciones
     st.markdown("## Recomendations")
     st.markdown("- [Plots](./recomend/plots.py)")
