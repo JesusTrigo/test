@@ -6,9 +6,9 @@ import os
 def main():
     # ----------- READ DNN MODEL -----------
     # Model architecture
-    prototxt = "/pages/model/MobileNetSSD_deploy.prototxt.txt"
+    prototxt = "/pages/pages/model/MobileNetSSD_deploy.prototxt.txt"
     # Weights
-    model = "/pages/model/MobileNetSSD_deploy.caffemodel"
+    model = "/pages/pages/model/MobileNetSSD_deploy.caffemodel"
     # Class labels
     classes = {
         0: "fondo", 1: "avión", 2: "bicicleta",
