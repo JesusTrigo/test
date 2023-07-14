@@ -8,7 +8,7 @@ from PIL import Image
 # Página principal
 def home():
     st.title("Proyecto de Data Science")
-    image = Image.open('/app/final/FinalPr/images/hackaboss.png')
+    image = Image.open('/app/test/test/images/hackaboss.png')
     st.image(image = image, use_column_width = True)
        
     st.markdown("""
@@ -26,27 +26,6 @@ def home():
                 \n\nA través de esta aplicación interactiva, esperamos compartir nuestro entusiasmo por Python y ofrecer a otros aprendices una fuente valiosa de conocimiento y recursos para su propio crecimiento profesional. ¡Únete a nosotros en esta emocionante aventura hacia el dominio de Python y la ciencia de datos!
             
                    """)
-
-# Página de recomendación
-def recomend():
-    st.title("Página de recomendación")
-    # Contenido de la página de recomendación
-    st.markdown("## Pestaña 1: Plots")
-    # Contenido de la pestaña 1 (Plots)
-    st.markdown("## Pestaña 2: App")
-    # Contenido de la pestaña 2 (App)
-
-# Función principal
-def main():
-    # Crear el menú
-    menu = ["Home", "Recomend"]
-    choice = st.sidebar.selectbox("Menu", menu)
-
-    # Determinar la página seleccionada
-    if choice == "Home":
-        home()
-    elif choice == "Recomend":
-        recomend()
 
 if __name__ == "__main__":
     main()
