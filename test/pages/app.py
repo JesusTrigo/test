@@ -5,7 +5,9 @@ from pages.pages import recomend
 def show():
     # Mostrar enlaces para elegir entre plots.py y app.py
     st.markdown("## Recommendations")
-    if st.button("Plots"):
+    if st.button("App"):
+        app.run()
+    elif st.button("Gráficos"):
         plots.intro()
         plots.get_top_25_beer_styles(df_Beer)
         plots.plot_most_common_beer_bar(df_Beer)
@@ -17,8 +19,6 @@ def show():
         plots.plot_abv_beer_style_box(df_Beer)
         plots.plot_3d_scatter_aroma_palate_abv(df_Beer)
         plots.plot_beer_wordcloud(df_Beer)
-    elif st.button("App"):
-        app.run()
 
 # Ejecutar la función show() cuando se llama al archivo
 if __name__ == '__main__':
