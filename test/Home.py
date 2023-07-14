@@ -7,7 +7,7 @@ from PIL import Image
 
     
 # Página principal
-def home():
+def main():
     st.title("Proyecto de Data Science")
     image = Image.open('/app/test/test/images/hackaboss.png')
     st.image(image = image, use_column_width = True)
