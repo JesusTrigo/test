@@ -1,6 +1,6 @@
 import streamlit as st
-from pages.recomend import plots
-from pages.recomend import app
+from test.pages.recomend import plots
+from test.pages.recomend import app
 
 def show():
     # Mostrar enlaces para elegir entre plots.py y app.py
