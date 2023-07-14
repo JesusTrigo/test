@@ -2,16 +2,25 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import requests
-from pages.pages import recomend
+from pages.pages.recomend import plots
+from pages.pages.recomend import app
 from PIL import Image
 
 
 # Página de recomendaciones
-if st.sidebar(recomend):
+if st.sidebar.button("Recomend"):
     # Mostrar enlaces directos a plots.py y app.py solo para la página de recomendaciones
     st.markdown("## Recomendations")
     st.markdown("- [Plots](./recomend/plots.py)")
     st.markdown("- [App](./recomend/app.py)")
+
+    # Verificar qué archivo se seleccionó y cargar el contenido correspondiente
+    if st.button("Plots"):
+        # Código para mostrar el contenido de plots.py
+        plots.show()
+    elif st.button("App"):
+        # Código para mostrar el contenido de app.py
+        app.run()
     
 # Página principal
 def home():
