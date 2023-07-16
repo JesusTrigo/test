@@ -70,6 +70,18 @@ def main():
         st.plotly_chart(fig)
         plt.title("Nube de palabras de nombres de cervezas")
 
+    intro()
+    
+    get_top_25_beer_styles(df_Beer)
+    
+    plot_most_common_beer_bar(df_Beer)
+
+    plot_beer_wordcloud(df_Beer)
+
+    plot_most_common_beer_treemap(df_Beer)
+
+    plot_most_reviewed_beers(df_Beer)
+
 
 if __name__ == "__main__":
     main()
