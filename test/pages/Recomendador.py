@@ -10,7 +10,7 @@ def main():
     if opcion == "App":
         recomend.main()
     elif opcion == "Gráficos":
-        plots.main()
+        plots.main(df_Beer)
 
 if __name__ == '__main__':
     main()
