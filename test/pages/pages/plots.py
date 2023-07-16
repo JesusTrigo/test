@@ -156,17 +156,31 @@ def plot_abv_beer_style_box(df_Beer):
     # Mostrar el gráfico interactivo en Streamlit
     st.plotly_chart(fig)
     
+
 def plot_3d_scatter_aroma_palate_abv(df_Beer):
-    # Obtener los 10 estilos de cerveza más comunes
-    top_10_beer_styles = df_Beer['beer/style'].value_counts().index[:10]
-    df_top_10 = df_Beer[df_Beer['beer/style'].isin(top_10_beer_styles)]
-    
-    # Gráfico de dispersión 3D de aroma, palate y ABV para los 10 estilos de cerveza más comunes
-    fig = px.scatter_3d(df_top_10, x='review/aroma', y='review/palate', z='beer/ABV', color='beer/style')
-    fig.update_layout(title='Relación entre Aroma, Palate y ABV')
-    
-    # Mostrar el gráfico
-    st.plotly_chart(fig)
+    fig = go.Figure(data=[go.Scatter3d(
+        x=df_Beer['review/aroma'],
+        y=df_Beer['review/palate'],
+        z=df_Beer['beer/ABV'],
+        mode='markers',
+        marker=dict(
+            size=5,
+            color=df_Beer['beer/ABV'],
+            colorscale='Viridis',
+            opacity=0.8
+        )
+    )])
+
+    fig.update_layout(
+        scene=dict(
+            xaxis_title='Aroma',
+            yaxis_title='Palate',
+            zaxis_title='ABV'
+        ),
+        margin=dict(l=0, r=0, b=0, t=0)
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
 
 # Función para crear una nube de palabras con los nombres de las cervezas
 
