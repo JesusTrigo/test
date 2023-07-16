@@ -156,6 +156,18 @@ def plot_abv_beer_style_box(df_Beer):
     # Mostrar el gráfico interactivo en Streamlit
     st.plotly_chart(fig)
     
+def plot_3d_scatter_aroma_palate_abv(df_Beer):
+    # Obtener los 10 estilos de cerveza más comunes
+    top_10_beer_styles = df_Beer['beer/style'].value_counts().index[:10]
+    df_top_10 = df_Beer[df_Beer['beer/style'].isin(top_10_beer_styles)]
+    
+    # Gráfico de dispersión 3D de aroma, palate y ABV para los 10 estilos de cerveza más comunes
+    fig = px.scatter_3d(df_top_10, x='review/aroma', y='review/palate', z='beer/ABV', color='beer/style',
+                        range_z=[2, 20])
+    fig.update_layout(title='Relación entre Aroma, Palate y Contenido de Alcohol por Volumen')
+    
+    # Mostrar el gráfico
+    st.plotly_chart(fig)
 
 
 # Función para crear una nube de palabras con los nombres de las cervezas
